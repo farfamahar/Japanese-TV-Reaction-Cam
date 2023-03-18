@@ -5,14 +5,14 @@
   }
 
   #webcam {
-    position: absolute;
-    top: 500px;
-    left: 0;
-    width: 185px;
-    height: 175px;
-    margin-left: 175px;
-    margin-top: 115px;
-    border: 8px solid #9d021f;
+    position: fixed;
+    bottom: 25%;
+    left: 7%;
+    width: 12%;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+    border: 6px solid #9d021f;
     border-radius: 30px;
     overflow: hidden;
     z-index: 9999;
