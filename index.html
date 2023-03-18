@@ -1,72 +1,23 @@
-<div id="container">
-  <div id="webcam">
-    <video id="video" playsinline autoplay></video>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <div id="container">
+    <div id="webcam">
+      <video id="video" playsinline autoplay></video>
+    </div>
+    <div id="video-container">
+      <div id="" onclick="playVideo()"></div>
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/wZGx-jUgA94?autoplay=0&start=78"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
-  <div id="video-container">
-    <div id="" onclick="playVideo()"></div>
-    <iframe
-      width="100%"
-      height="100%"
-      src="https://www.youtube.com/embed/wZGx-jUgA94?autoplay=0&start=78"
-      frameborder="0"
-      allowfullscreen
-    ></iframe>
-  </div>
-</div>
-
-<style>
-  #container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  #webcam {
-    position: absolute;
-    top: 500px;
-    left: 0;
-    width: 185px;
-    height: 175px;
-    margin-left: 175px;
-    margin-top: 115px;
-    border: 8px solid #9D021F;
-    border-radius: 30px;
-    overflow: hidden;
-    z-index: 9999;
-  }
-
-  #webcam video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  #video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
-
-<script>
-  function playVideo() {
-    var video = document.getElementById("video");
-    video.play();
-    document.getElementById("play-button").style.display = "none";
-  }
-
-  navigator.mediaDevices
-    .getUserMedia({ video: true })
-    .then(function (stream) {
-      var video = document.getElementById("video");
-      video.srcObject = stream;
-      video.onloadedmetadata = function (e) {
-        video.play();
-      };
-    })
-    .catch(function (err) {
-      console.log(err.name + ": " + err.message);
-    });
-</script>
+</html>

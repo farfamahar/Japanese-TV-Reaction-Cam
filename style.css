@@ -1,0 +1,33 @@
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  #webcam {
+    position: absolute;
+    top: 500px;
+    left: 0;
+    width: 185px;
+    height: 175px;
+    margin-left: 175px;
+    margin-top: 115px;
+    border: 8px solid #9d021f;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 9999;
+  }
+
+  #webcam video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  #video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
